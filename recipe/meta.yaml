@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/dftbplus/skprogs/archive/refs/tags/{{ version }}.tar.gz
-  sha256: e63e6a38f920bbb85f1f8fdff2da5ec195a3f2ded354f6f09cf68cf69785b59d
+  url: https://github.com/dftbplus/skprogs/archive/refs/heads/main.zip
+  sha256: da48e77a5d3b68334e0195211273c61372a410f5a4500eee56e8ed46d2ba5186
   patches:
     - no-python.patch
 
@@ -17,32 +17,37 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}
     - {{ compiler('fortran') }}
     - cmake
     - ninja
-    - pkg-config
+    - python
+    - numpy
+    - scipy
   host:
     - libxc
-  run:
-    - sktools ={{ version }}
+    - libblas
+    - liblapack
 
 test:
   commands:
-    - slateratom --version
+    - test -f $PREFIX/bin/slateratom
+    - $PREFIX/bin/slateratom --version
+    - test -f $PREFIX/bin/sktwocnt
     - sktwocnt --version
 
 about:
   home: https://github.com/dftbplus/skprogs
   license: LGPL-3.0-or-later
-  license_family: GPL
+  license_family: LGPL
   license_file:
     - COPYING
     - COPYING.LESSER
   summary: |
-    Package containing a programs to generate Slater-Koster files for the DFTB-method
+    Package containing programs to generate Slater-Koster files for the DFTB-method
+  dev_url: https://github.com/dftbplus/skprogs
 
 extra:
   recipe-maintainers:
     - aradi
     - awvwgk
+    - vanderhe
