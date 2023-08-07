@@ -1,14 +1,16 @@
-About skprogs
-=============
+About skprogs-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/skprogs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/dftbplus/skprogs
 
 Package license: LGPL-3.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/skprogs-feedstock/blob/main/LICENSE.txt)
+Summary: Package containing programs to generate Slater-Koster files for the DFTB-method
 
-Summary: Package containing a programs to generate Slater-Koster files for the DFTB-method
 
+Development: https://github.com/dftbplus/skprogs
 
 Current build status
 ====================
@@ -31,7 +33,7 @@ Current build status
               <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16518&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/skprogs-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/skprogs-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -165,4 +167,5 @@ Feedstock Maintainers
 
 * [@aradi](https://github.com/aradi/)
 * [@awvwgk](https://github.com/awvwgk/)
+* [@vanderhe](https://github.com/vanderhe/)
 
