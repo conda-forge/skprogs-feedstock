@@ -2,7 +2,7 @@ diff --git a/CMakeLists.txt b/CMakeLists.txt
 index fafe5a5..50d0dc4 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -89,7 +89,3 @@ configure_file(
+@@ -91,7 +91,3 @@ configure_file(
    ${CMAKE_CURRENT_SOURCE_DIR}/utils/export/skprogs-activate.sh.in
    ${CMAKE_CURRENT_BINARY_DIR}/skprogs-activate.sh
    @ONLY)

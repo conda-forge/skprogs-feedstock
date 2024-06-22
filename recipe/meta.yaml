@@ -1,13 +1,15 @@
 {% set name = "skprogs" %}
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/dftbplus/skprogs/archive/refs/tags/{{ version }}.tar.gz
-  sha256: a16cc91cfa702b2e40b61bbe218fd43d9225469c6e90b56ab04b89838916f9bf
+  # url: https://github.com/dftbplus/skprogs/archive/refs/tags/{{ version }}.tar.gz
+  # sha256: a16cc91cfa702b2e40b61bbe218fd43d9225469c6e90b56ab04b89838916f9bf
+  url: https://github.com/aradi/skprogs/archive/refs/heads/release.zip
+  sha256: 2941599b61748a4d0727264f5d3f50d481e0a88aaa32a36b664b486593d21278
   patches:
     - no-python.patch
 
