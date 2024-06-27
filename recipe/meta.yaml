@@ -1,5 +1,5 @@
 {% set name = "skprogs" %}
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/dftbplus/skprogs/archive/refs/tags/{{ version }}.tar.gz
-  sha256: a16cc91cfa702b2e40b61bbe218fd43d9225469c6e90b56ab04b89838916f9bf
+  sha256: 220f7149557ef92b67c69450f9d7bb514de356b4db1571c5a9f20c9c4f0de79f
   patches:
     - no-python.patch
 
@@ -18,6 +18,7 @@ build:
 requirements:
   build:
     - {{ compiler('fortran') }}
+    - {{ stdlib("c") }}
     - cmake
     - ninja
     - python
